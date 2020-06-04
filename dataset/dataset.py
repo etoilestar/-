@@ -1,6 +1,7 @@
 import cv2
 from torch.utils.data import DataLoader, Dataset
 import albumentations #推荐的数据增强库，https://blog.csdn.net/qq_27039891/article/details/100795846
+#还有两个备选数据增强库：torchvision中的transformer和imgaug
 
 class MYdataloader(Dataset):
     def __init__(self, path,mode='train'):#定义训练/验证数据的相关信息，包括路径，数据增强等，形成数据的列表
